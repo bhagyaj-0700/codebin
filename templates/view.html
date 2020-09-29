@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}CODEBIN{% endblock %}
+
+{% block filter %}
+{% for option in options %}
+<option value="{{ option }}">{{ option }}</option>
+{% endfor %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card" style='margin: 5%; box-shadow: 10px;'>
+    <div class="card-header">
+      <h2>{{ title }}</h2>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <pre>Code:<code class="{{ category }}">{{ code }}</code></pre>
+        
+      </blockquote>
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}CODEBIN{% endblock %}
+
+
+
+{% block content %}
+{% for code in codes %}
+<div style="padding: 20px; border-radius: 5px; border: #99b8eb solid 1px; margin: 4px; box-shadow: inset 1px 1px  #99b8eb; cursor: pointer;" onclick="location.href='{{ url_for("view",id=code.id) }}'">
+    <big>{{ code.title }}</big>  <small>({{ code.category }})</small>
+</div>
+{% endfor %}
+{% endblock %}
